@@ -21,22 +21,28 @@ yarn build:weapp
 ```
 
 # 目录结构
-    ├── dist                        // 微信小程序编译结果目录
-    ├── docs                        // 文档目录
-    ├── config                      // Taro 配置目录
+    ├── dist/                       // 微信小程序编译结果目录
+    ├── docs/                       // 文档目录
+    ├── config/                     // Taro 配置目录
     │   ├── dev.js                  // 开发时配置
     │   ├── index.js                // 默认配置
     │   └── prod.js                 // 打包时配置
-    ├── src                         // 源码目录
-    │   ├── components              // 组件
-    │   ├── dva                     // dva-core 配置
+    ├── src/                        // 源码目录
+    │   ├── components/             // 公共组件
+    │   └── dvaCore/                // dva-core 配置
+    │       └── index.ts
+    │   └── models/                 // 全局 models
+    │       └── index.ts            
     │   ├── pages                   // 页面文件目录
     │   │   └── index
-    │   │       ├── index.js        // 页面逻辑
-    │   │       └── index.less      // 页面样式
+    │   │       ├── model/          // 业务逻辑 (Dva model)
+    │   │       ├── index.tsx       // 页面逻辑
+    │   │       └── index.styl      // 页面样式
+    │   ├── services/               // 全局模块请求
     │   ├── utils                   // 常用工具类
     │   ├── app.js                  // 入口文件
     │   └── index.html
+    ├── global.d.ts                 // 全局类型配置
     └── package.json                // 项目依赖
 
 ## TODO-LIST
