@@ -3,11 +3,12 @@ import '@tarojs/async-await'
 import { Provider } from '@tarojs/redux'
 import { createLogger } from 'redux-logger'
 
-import models from './models'
+import models from './models
 import dvaCore from './dvaCore'
 
 import Index from './pages/index'
 import Counter from './pages/counter'
+import Data from './pages/data'
 
 import './app.styl'
 import 'taro-ui/dist/style/index.scss'
@@ -41,6 +42,7 @@ class App extends Component {
     pages: [
       'pages/index/index',
       'pages/counter/index',
+      'pages/data/index',
     ],
     window: {
       backgroundTextStyle: 'dark',
@@ -66,16 +68,19 @@ class App extends Component {
           iconPath: './assets/counter.png',
           selectedIconPath: './assets/counter.png',
         },
+        {
+          pagePath: 'pages/data/index',
+          text: '数据',
+          iconPath: './assets/data.png',
+          selectedIconPath: './assets/data.png',
+        },
       ]
     },
   }
 
   componentDidMount () {}
-
   componentDidShow () {}
-
   componentDidHide () {}
-
   componentDidCatchError () {}
 
   // 在 App 类中的 render() 函数没有实际作用
@@ -85,6 +90,7 @@ class App extends Component {
       <Provider store={store}>
         <Index />
         <Counter />
+        <Data />
       </Provider>
     )
   }

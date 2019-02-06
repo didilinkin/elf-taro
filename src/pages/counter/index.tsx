@@ -2,12 +2,12 @@
  * @Author: yanxiaodi 929213769@qq.com
  * @Date: 2019-02-03 16:33:44
  * @LastEditors: yanxiaodi 929213769@qq.com
- * @LastEditTime: 2019-02-06 13:23:29
- * @Description:
+ * @LastEditTime: 2019-02-06 19:24:49
+ * @Description: counter page
  */
 import { ComponentClass } from 'react'
 import Taro, { Component, Config } from '@tarojs/taro'
-import { View, Button } from '@tarojs/components'
+import { View } from '@tarojs/components'
 import { connect } from '@tarojs/redux'
 
 import { AtButton } from 'taro-ui'
@@ -54,22 +54,17 @@ interface Counter {
 )
 class Counter extends Component {
   config: Config = {
-    navigationBarTitleText: '计算器',
+    navigationBarTitleText: '计数',
     enablePullDownRefresh: true,
     backgroundTextStyle: "dark",
-  };
+  }
 
-  render() {
+  render () {
     return (
       <View>
         Count: {this.props.count}
-        <AtButton onClick={this.props.onIncrement} size='small'>
-          +
-        </AtButton>
-
-        <AtButton onClick={this.props.onDecrement} size='small'>
-          -
-        </AtButton>
+        <AtButton onClick={this.props.onIncrement} size='small'> + </AtButton>
+        <AtButton onClick={this.props.onDecrement} size='small'> - </AtButton>
       </View>
     )
   }

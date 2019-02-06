@@ -44,9 +44,6 @@ yarn build:weapp
 * lodash 引用 优化 - 整体引入 会造成项目体积过大, 无法上传
 * Pure Component 使用
 * 贴合 小程序设计规范 (UI)
-* 个人中心
-* 资讯新闻 展示
-* 前端 展示 gameType 全部为 大写; 提交接口的时候 转换为小写
 * Immutable 说明文档
 * Prettier
 * git hooks

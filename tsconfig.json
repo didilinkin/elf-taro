@@ -21,12 +21,7 @@
     "typeRoots": [
       "node_modules/@types",
       "global.d.ts"
-    ],
-    "paths": {
-      "@/*": [
-        "./*"
-      ]
-    }
+    ]
   },
   "compileOnSave": false
 }
