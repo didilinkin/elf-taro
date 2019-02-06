@@ -1,7 +1,16 @@
 import Taro, { Component, Config } from '@tarojs/taro'
+import '@tarojs/async-await'
+import { Provider } from '@tarojs/redux'
+import { createLogger } from 'redux-logger'
+
+import models from './models'
+import dvaCore from './dvaCore'
+
 import Index from './pages/index'
+import Counter from './pages/counter'
 
 import './app.styl'
+import 'taro-ui/dist/style/index.scss'
 
 // 如果需要在 h5 环境中开启 React Devtools
 // 取消以下注释：
@@ -9,8 +18,18 @@ import './app.styl'
 //   require('nerv-devtools')
 // }
 
-class App extends Component {
+// Set Dva
+const dva = dvaCore.createApp({
+  initialState: {},
+  models: models,
+  onAction: createLogger(),
+  onError(e, dispatch) {
+    console.log('发生错误 ===> ', e, dispatch)
+  },
+})
+const store = dva.getStore()
 
+class App extends Component {
   /**
    * 指定config的类型声明为: Taro.Config
    *
@@ -20,14 +39,35 @@ class App extends Component {
    */
   config: Config = {
     pages: [
-      'pages/index/index'
+      'pages/index/index',
+      'pages/counter/index',
     ],
     window: {
-      backgroundTextStyle: 'light',
+      backgroundTextStyle: 'dark',
       navigationBarBackgroundColor: '#fff',
       navigationBarTitleText: 'WeChat',
       navigationBarTextStyle: 'black'
-    }
+    },
+    tabBar: {
+      color: '#626567',
+      selectedColor: '#626567',
+      backgroundColor: '#FBFBFB',
+      borderStyle: 'white',
+      list: [
+        {
+          pagePath: 'pages/index/index',
+          text: '首页',
+          iconPath: './assets/index.png',
+          selectedIconPath: './assets/index.png',
+        },
+        {
+          pagePath: 'pages/counter/index',
+          text: '计数',
+          iconPath: './assets/counter.png',
+          selectedIconPath: './assets/counter.png',
+        },
+      ]
+    },
   }
 
   componentDidMount () {}
@@ -42,7 +82,10 @@ class App extends Component {
   // 请勿修改此函数
   render () {
     return (
-      <Index />
+      <Provider store={store}>
+        <Index />
+        <Counter />
+      </Provider>
     )
   }
 }

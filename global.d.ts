@@ -8,3 +8,10 @@ declare module "*.less";
 declare module "*.scss";
 declare module "*.sass";
 declare module "*.styl";
+
+declare const global: any;
+declare interface DvaApi {
+  put: Function,
+  call: Function,
+  select: Function,
+}

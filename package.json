@@ -4,7 +4,7 @@
   "description": "Taro.js 模版项目",
   "repository": "git@github.com:didilinkin/tarojs-ts-cli.git",
   "author": "didilinkin <929213769@qq.com>",
-  "license": "GPL",
+  "license": "MIT",
   "scripts": {
     "build:weapp": "taro build --type weapp",
     "build:swan": "taro build --type swan",
@@ -20,7 +20,9 @@
     "dev:rn": "npm run build:rn -- --watch"
   },
   "dependencies": {
+    "@tarojs/async-await": "^1.2.12",
     "@tarojs/components": "1.2.8",
+    "@tarojs/redux": "^1.2.12",
     "@tarojs/router": "1.2.8",
     "@tarojs/taro": "1.2.8",
     "@tarojs/taro-alipay": "1.2.8",
@@ -28,29 +30,39 @@
     "@tarojs/taro-swan": "1.2.8",
     "@tarojs/taro-tt": "1.2.8",
     "@tarojs/taro-weapp": "1.2.8",
+    "dva-core": "^1.4.0",
+    "dva-loading": "^2.0.6",
+    "immutable": "^4.0.0-rc.12",
+    "nerv-devtools": "^1.3.9",
     "nervjs": "^1.3.9",
-    "nerv-devtools": "^1.3.9"
+    "redux": "^4.0.1",
+    "taro-ui": "^2.0.0"
   },
   "devDependencies": {
-    "@types/react": "^16.4.6",
-    "@types/webpack-env": "^1.13.6",
     "@tarojs/plugin-babel": "1.2.8",
     "@tarojs/plugin-csso": "1.2.8",
+    "@tarojs/plugin-sass": "^1.2.12",
     "@tarojs/plugin-stylus": "1.2.8",
     "@tarojs/plugin-uglifyjs": "1.2.8",
     "@tarojs/webpack-runner": "1.2.8",
+    "@types/react": "^16.4.6",
+    "@types/webpack-env": "^1.13.6",
+    "babel-eslint": "^8.2.3",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-plugin-transform-jsx-stylesheet": "^0.6.5",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
-    "babel-eslint": "^8.2.3",
+    "classnames": "^2.2.6",
     "eslint": "^4.19.1",
     "eslint-config-taro": "1.2.8",
-    "eslint-plugin-react": "^7.8.2",
     "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-react": "^7.8.2",
     "eslint-plugin-taro": "1.2.8",
     "eslint-plugin-typescript": "^0.12.0",
-    "typescript": "^3.0.1"
+    "omit.js": "^1.0.0",
+    "redux-logger": "^3.0.6",
+    "typescript": "^3.0.1",
+    "weui": "^1.1.3"
   }
 }
