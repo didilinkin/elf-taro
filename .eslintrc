@@ -1,6 +1,7 @@
 {
   "extends": [
-    "taro"
+    "taro",
+    "prettier"
   ],
   "rules": {
     "no-unused-vars": [
