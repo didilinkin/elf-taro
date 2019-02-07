@@ -9,7 +9,7 @@ npm install -g @tarojs/cli
 # 安装依赖
 yarn install
 
-# 小程序 预览模式 => 用 小程序开发工具 打开 ./dist 文件夹 即可预览
+# 小程序 预览模式 => 用 小程序开发工具 打开 ./dist 文件夹 即可预览
 yarn dev:weapp 
 ```
 
