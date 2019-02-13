@@ -3,7 +3,7 @@ import '@tarojs/async-await'
 import { Provider } from '@tarojs/redux'
 import { createLogger } from 'redux-logger'
 
-import models from './models
+import models from './models'
 import dvaCore from './dvaCore'
 
 import Index from './pages/index'
