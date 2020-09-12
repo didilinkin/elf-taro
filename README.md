@@ -54,3 +54,9 @@ yarn build:weapp
 * Prettier
 * git hooks
 * ESLint (TS) rules 配置
+
+## Remake
+* ts
+* redux
+* immer
+* taro-ui
