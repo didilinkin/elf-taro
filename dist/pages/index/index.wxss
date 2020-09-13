@@ -1,0 +1,7 @@
+.index {
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+/*# sourceMappingURL=src/pages/index/index.css.map */

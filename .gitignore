@@ -4,7 +4,8 @@
 /node_modules
 
 # production
-/dist
+# 因为 Taro版本问题 有几率高版本无法编译低版本, 所以作为备份演示
+# /dist
 
 # misc
 .DS_Store

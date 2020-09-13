@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { View, Button, Text } from '@tarojs/components'
 
+import { AtButton } from 'taro-ui'
+
 import { add, minus, asyncAdd } from '../../actions/counter'
 
 import './index.styl'
@@ -82,6 +84,15 @@ class Index extends Component {
         </View>
         <View>
           <Text>Hello, weapp!</Text>
+        </View>
+
+        <View>
+          <AtButton type="primary" size="small">
+            按钮A
+          </AtButton>
+          <AtButton type="secondary" size="small">
+            按钮B
+          </AtButton>
         </View>
       </View>
     )

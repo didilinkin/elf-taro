@@ -3,6 +3,8 @@ import { Provider } from 'react-redux'
 
 import configStore from './store'
 
+// style
+import 'taro-ui/dist/style/index.scss'
 import './app.styl'
 
 const store = configStore()
