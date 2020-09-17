@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 // import { connect } from 'react-redux'
 import { View, Text } from '@tarojs/components'
 import { AtButton } from 'taro-ui'
+import { styled } from 'linaria/react'
 
 import './index.styl'
 
@@ -23,6 +24,17 @@ type IProps = PageStateProps & PageOwnProps
 interface Index {
   props: IProps
 }
+
+const BtnGroup = styled(View)<{
+  color: string
+}>`
+  color: ${props => props.color};
+  background-color: #999;
+  > .at-button--small {
+    display: inline-block;
+    margin: 10%;
+  }
+`
 
 // @connect(
 //   ({ counter }) => ({
@@ -55,14 +67,16 @@ class Index extends Component {
         <View>
           <Text>Hello, weapp!</Text>
         </View>
-        <View>
+
+        <BtnGroup color="red">
+          测试文字颜色
           <AtButton type="primary" size="small">
             按钮A
           </AtButton>
           <AtButton type="secondary" size="small">
             按钮B
           </AtButton>
-        </View>
+        </BtnGroup>
       </View>
     )
   }
