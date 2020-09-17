@@ -1,29 +1,17 @@
-import { createStore, applyMiddleware, compose } from 'redux'
-import thunkMiddleware from 'redux-thunk'
-import rootReducer from '../reducers'
+// dva
+import { createLogger } from 'redux-logger'
 
-const composeEnhancers =
-  typeof window === 'object' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
-    ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
-        // Specify extension’s options like name, actionsBlacklist, actionsCreators, serialize...
-      })
-    : compose
+import models from '../models'
+import dvaCore from '../dvaCore'
 
-const middlewares = [thunkMiddleware]
+const dva = dvaCore.createApp({
+  initialState: {},
+  models: models,
+  onAction: createLogger(),
+  onError(e, dispatch) {
+    console.log('发生错误 ===> ', e, dispatch)
+  },
+})
+const store = dva.getStore()
 
-if (
-  process.env.NODE_ENV === 'development' &&
-  process.env.TARO_ENV !== 'quickapp'
-) {
-  middlewares.push(require('redux-logger').createLogger())
-}
-
-const enhancer = composeEnhancers(
-  applyMiddleware(...middlewares)
-  // other store enhancers if any
-)
-
-export default function configStore() {
-  const store = createStore(rootReducer, enhancer)
-  return store
-}
+export default store

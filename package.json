@@ -61,12 +61,15 @@
     "@tarojs/react": "3.0.0-rc.6",
     "@tarojs/runtime": "3.0.0-rc.6",
     "@tarojs/taro": "3.0.0-rc.6",
+    "dva-core": "^2.0.2",
+    "dva-immer": "^0.4.19",
+    "dva-model-extend": "^0.1.2",
+    "lodash": "^4.17.20",
     "react": "^16.10.0",
     "react-dom": "^16.10.0",
     "react-redux": "^7.2.0",
     "redux": "^4.0.0",
     "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.3.0",
     "taro-ui": "3.0.0-alpha.3"
   },
   "devDependencies": {

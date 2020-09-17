@@ -1,5 +1,8 @@
 # tarojs-ts-cli
-Taro 小程序 脚手架 (Taro + Dva + Typescript + Immutable)
+
+Taro 小程序 脚手架
+
+> Taro-cli version: Taro v3.0.0-rc.6
 
 ## 预览项目
 
@@ -10,7 +13,7 @@ npm install -g @tarojs/cli
 yarn install
 
 # 小程序 预览模式 => 用 小程序开发工具 打开 ./dist 文件夹 即可预览
-yarn dev:weapp 
+yarn dev:weapp
 ```
 
 ## 打包项目
@@ -21,8 +24,8 @@ yarn build:weapp
 ```
 
 # 目录结构
+
     ├── dist/                       // 微信小程序编译结果目录
-    ├── docs/                       // 文档目录
     ├── config/                     // Taro 配置目录
     │   ├── dev.js                  // 开发时配置
     │   ├── index.js                // 默认配置
@@ -32,7 +35,7 @@ yarn build:weapp
     │   └── dvaCore/                // dva-core 配置
     │       └── index.ts
     │   └── models/                 // 全局 models
-    │       └── index.ts            
+    │       └── index.ts
     │   ├── pages                   // 页面文件目录
     │   │   └── index
     │   │       ├── model/          // 业务逻辑 (Dva model)
@@ -46,17 +49,55 @@ yarn build:weapp
     └── package.json                // 项目依赖
 
 ## TODO-LIST
-* 全局 lang 配置
-* lodash 引用 优化 - 整体引入 会造成项目体积过大, 无法上传
-* Pure Component 使用
-* 贴合 小程序设计规范 (UI)
-* Immutable 说明文档
-* Prettier
-* git hooks
-* ESLint (TS) rules 配置
+
+- 全局 lang 配置
+- Pure Component 使用
+- 贴合 小程序设计规范 (UI)
+- 用户信息读取
+- component 功能
 
 ## Remake
-* ts
-* redux
-* immer
-* taro-ui
+
+- css-in-js
+- hooks
+
+待确认
+dva-model-extend
+
+## 项目版本升级
+
+```bash
+# 1. 更新 Taro CLI 工具:
+npm i -g @tarojs/cli@latest
+
+# 2. 更新项目中 Taro 相关的依赖:
+taro update project
+
+# 3. 删除原来的node_modules后重新安装依赖(注意):
+cnpm install
+```
+
+## 已配置的依赖
+
+| 名称    | 库名称                                                                   | 用途                                  |
+| ------- | ------------------------------------------------------------------------ | ------------------------------------- |
+| Taro    | [@tarojs/taro](https://taro-docs.jd.com/taro/docs/README/index.html)     | 基础库                                |
+| Taro-UI | [taro-ui](https://taro-ui.jd.com/#/docs/introduction)                    | 样式库                                |
+| Dva     | [dva-core](https://dvajs.com/guide/)                                     | 基于 redux 和 redux-saga 的数据流方案 |
+| Immer   | [dva-immer](https://github.com/dvajs/dva/tree/master/packages/dva-immer) | immer 不可变结构                      |
+| Lodash  | [lodash](https://lodash.com/docs/4.17.15)                                | 函数库                                |
+
+## 开发环境的依赖
+
+| 名称            | 库名称                                                           | 用途              |
+| --------------- | ---------------------------------------------------------------- | ----------------- |
+| Typescript      | [typescript](https://www.typescriptlang.org/docs)                | JS 超集语言       |
+| ESLint          | [eslint](https://eslint.org/docs/user-guide/getting-started)     | 规范检查          |
+| Prettier        | [prettier](https://prettier.io/docs/en/index.html)               | 代码格式化        |
+| cz-customizable | [cz-customizable](https://www.npmjs.com/package/cz-customizable) | Git commit 规范化 |
+
+## 特别鸣谢
+
+| 库名称                                                   | 用途                                                    |
+| -------------------------------------------------------- | ------------------------------------------------------- |
+| [taro-request](https://github.com/TigerHee/taro-request) | 封装 Taro.request（拦截器，url 配置，Authorization 等） |
