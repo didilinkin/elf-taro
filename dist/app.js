@@ -7589,7 +7589,7 @@ __webpack_require__.r(__webpack_exports__);
   
 
 
-var config = {"pages":["pages/index/index","pages/counter/index","pages/data/index","pages/map/index"],"window":{"backgroundTextStyle":"dark","navigationBarBackgroundColor":"#fff","navigationBarTitleText":"WeChat","navigationBarTextStyle":"black"},"tabBar":{"color":"#626567","selectedColor":"#626567","backgroundColor":"#FBFBFB","borderStyle":"white","list":[{"pagePath":"pages/index/index","text":"首页","iconPath":"./assets/index.png","selectedIconPath":"./assets/index.png"},{"pagePath":"pages/counter/index","text":"计数","iconPath":"./assets/counter.png","selectedIconPath":"./assets/counter.png"},{"pagePath":"pages/data/index","text":"数据","iconPath":"./assets/data.png","selectedIconPath":"./assets/data.png"},{"pagePath":"pages/map/index","text":"地图","iconPath":"./assets/map.png","selectedIconPath":"./assets/map.png"}]}};
+var config = {"pages":["pages/index/index","pages/counter/index","pages/data/index","pages/map/index"],"window":{"backgroundTextStyle":"dark","navigationBarBackgroundColor":"#fff","navigationBarTitleText":"WeChat","navigationBarTextStyle":"black"},"tabBar":{"color":"#626567","selectedColor":"#6190E8","backgroundColor":"#FBFBFB","borderStyle":"white","list":[{"pagePath":"pages/index/index","text":"首页","iconPath":"./assets/index.png","selectedIconPath":"./assets/index-select.png"},{"pagePath":"pages/counter/index","text":"计数","iconPath":"./assets/counter.png","selectedIconPath":"./assets/counter-select.png"},{"pagePath":"pages/data/index","text":"数据","iconPath":"./assets/data.png","selectedIconPath":"./assets/data-select.png"},{"pagePath":"pages/map/index","text":"地图","iconPath":"./assets/map.png","selectedIconPath":"./assets/map-select.png"}]}};
 _tarojs_runtime__WEBPACK_IMPORTED_MODULE_0__["window"].__taroAppConfig = config
 var inst = App(Object(_tarojs_runtime__WEBPACK_IMPORTED_MODULE_0__["createReactApp"])(_node_modules_tarojs_mini_runner_node_modules_babel_loader_lib_index_js_node_modules_linaria_loader_js_ref_10_1_app_tsx__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"], react__WEBPACK_IMPORTED_MODULE_2__, react_dom__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"], config))
 
@@ -7852,15 +7852,17 @@ var initState = {
               });
 
             case 17:
-              Object(_tarojs_taro__WEBPACK_IMPORTED_MODULE_1__["hideLoading"])();
               return _context.finish(14);
+
+            case 18:
+              Object(_tarojs_taro__WEBPACK_IMPORTED_MODULE_1__["hideLoading"])();
 
             case 19:
             case "end":
               return _context.stop();
           }
         }
-      }, fetch, null, [[3, 11, 14, 19]]);
+      }, fetch, null, [[3, 11, 14, 18]]);
     }),
     init: /*#__PURE__*/_Users_yanxiaodi_www_my_wx_elf_taro_cli_node_modules_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function init(_, _ref2) {
       var put;

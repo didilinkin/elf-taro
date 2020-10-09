@@ -19,6 +19,8 @@
 /* harmony import */ var _tarojs_components__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @tarojs/components */ "./node_modules/@tarojs/components/mini/index.js");
 /* harmony import */ var taro_ui__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! taro-ui */ "./node_modules/taro-ui/dist/index.umd.js");
 /* harmony import */ var taro_ui__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(taro_ui__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _style_styl__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./style.styl */ "./src/pages/counter/style.styl");
+/* harmony import */ var _style_styl__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_style_styl__WEBPACK_IMPORTED_MODULE_8__);
 
 
 
@@ -31,6 +33,7 @@ var _dec, _class;
  * @Last Modified by: yanxiaodi
  * @Last Modified time: 2020-09-16 13:02:24
  */
+
 
 
 
@@ -76,17 +79,23 @@ var Counter = (_dec = Object(react_redux__WEBPACK_IMPORTED_MODULE_5__[/* connect
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_tarojs_components__WEBPACK_IMPORTED_MODULE_6__["View"], {
         className: "counter"
-      }, "Count: ", this.props.count, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(taro_ui__WEBPACK_IMPORTED_MODULE_7__["AtButton"], {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(taro_ui__WEBPACK_IMPORTED_MODULE_7__["AtCard"], {
+        extra: "dva\u4E0Eimmer",
+        title: "\u8BA1\u6570-\u72B6\u6001\u7BA1\u7406",
+        thumb: "http://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_tarojs_components__WEBPACK_IMPORTED_MODULE_6__["Text"], null, "Count: ", this.props.count), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(taro_ui__WEBPACK_IMPORTED_MODULE_7__["AtButton"], {
         size: "small",
         circle: true,
         type: "primary",
-        onClick: this.props.onIncrement
+        onClick: this.props.onIncrement,
+        className: "counter--btn"
       }, ' ', "+", ' '), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(taro_ui__WEBPACK_IMPORTED_MODULE_7__["AtButton"], {
         size: "small",
         circle: true,
         type: "secondary",
-        onClick: this.props.onDecrement
-      }, ' ', "-", ' '));
+        onClick: this.props.onDecrement,
+        className: "counter--btn"
+      }, ' ', "-", ' ')));
     }
   }]);
 
@@ -113,6 +122,17 @@ __webpack_require__.r(__webpack_exports__);
 var inst = Page(Object(_tarojs_runtime__WEBPACK_IMPORTED_MODULE_0__["createPageConfig"])(_node_modules_tarojs_mini_runner_node_modules_babel_loader_lib_index_js_node_modules_linaria_loader_js_ref_10_1_index_tsx__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"], 'pages/counter/index'))
 
 
+
+/***/ }),
+
+/***/ "./src/pages/counter/style.styl":
+/*!**************************************!*\
+  !*** ./src/pages/counter/style.styl ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
 
 /***/ })
 

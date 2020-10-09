@@ -6,9 +6,10 @@
  */
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { View } from '@tarojs/components'
+import { View, Text } from '@tarojs/components'
+import { AtButton, AtCard } from 'taro-ui'
 
-import { AtButton } from 'taro-ui'
+import './style.styl'
 
 type PageStateProps = {
   dispatch: Function
@@ -54,25 +55,33 @@ class Counter extends Component {
   render() {
     return (
       <View className="counter">
-        Count: {this.props.count}
-        <AtButton
-          size="small"
-          circle={true}
-          type="primary"
-          onClick={this.props.onIncrement}
+        <AtCard
+          extra="dva与immer"
+          title="计数-状态管理"
+          thumb="http://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png"
         >
-          {' '}
-          +{' '}
-        </AtButton>
-        <AtButton
-          size="small"
-          circle={true}
-          type="secondary"
-          onClick={this.props.onDecrement}
-        >
-          {' '}
-          -{' '}
-        </AtButton>
+          <Text>Count: {this.props.count}</Text>
+          <AtButton
+            size="small"
+            circle={true}
+            type="primary"
+            onClick={this.props.onIncrement}
+            className="counter--btn"
+          >
+            {' '}
+            +{' '}
+          </AtButton>
+          <AtButton
+            size="small"
+            circle={true}
+            type="secondary"
+            onClick={this.props.onDecrement}
+            className="counter--btn"
+          >
+            {' '}
+            -{' '}
+          </AtButton>
+        </AtCard>
       </View>
     )
   }

@@ -56,8 +56,8 @@ export default {
             asyncData: data,
           },
         })
-        hideLoading()
       }
+      hideLoading()
     },
     *init(_: void, { put }: DvaApi) {
       yield put({

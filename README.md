@@ -1,8 +1,15 @@
-# tarojs-ts-cli
+# elf-taro-cli
 
-Taro 小程序 脚手架
+Elf 基于 Taro 的 小程序 脚手架
 
 > Taro-cli version: Taro v3.0.0-rc.6
+
+## 主要功能
+
+- dva
+- 异步请求
+- 腾讯地图 示例
+- Typescript
 
 ## 预览项目
 
@@ -48,21 +55,11 @@ yarn build:weapp
     ├── global.d.ts                 // 全局类型配置
     └── package.json                // 项目依赖
 
-## TODO-LIST
+## TODO
 
-- 全局 lang 配置
-- Pure Component 使用
-- 贴合 小程序设计规范 (UI)
 - 用户信息读取
-- component 功能
-
-## Remake
-
-- css-in-js
-- hooks
-
-待确认
-dva-model-extend
+- components 功能
+- dva-model-extend
 
 ## 项目版本升级
 

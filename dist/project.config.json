@@ -6,14 +6,14 @@
   "setting": {
     "urlCheck": true,
     "es6": false,
-    "enhance": false,
+    "enhance": true,
     "postcss": false,
     "preloadBackgroundData": false,
     "minified": false,
     "newFeature": false,
     "coverView": true,
     "nodeModules": false,
-    "autoAudits": true,
+    "autoAudits": false,
     "showShadowRootInWxmlPanel": true,
     "scopeDataCheck": false,
     "uglifyFileName": false,
@@ -21,14 +21,20 @@
     "checkSiteMap": true,
     "uploadWithSourceMap": true,
     "compileHotReLoad": false,
+    "useMultiFrameRuntime": false,
+    "useApiHook": false,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
       "outputPath": ""
     },
+    "bundle": true,
     "useIsolateContext": true,
     "useCompilerModule": false,
-    "userConfirmedUseCompilerModuleSwitch": false
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true
   },
   "compileType": "miniprogram",
   "simulatorType": "wechat",

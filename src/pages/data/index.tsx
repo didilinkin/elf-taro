@@ -10,6 +10,8 @@ import { View, Text } from '@tarojs/components'
 import { AtButton, AtList, AtListItem, AtCard } from 'taro-ui'
 import isArray from 'lodash/isArray'
 
+import './style.styl'
+
 type PageStateProps = {
   dispatch: Function
   asyncData: any
@@ -47,16 +49,16 @@ class Data extends Component {
     return (
       <View className="data">
         <AtCard
-          // note="小Tips"
-          extra="dva/request"
-          title="请求远程数据"
-          thumb="http://www.logoquan.com/upload/list/20180421/logoquan15259400209.PNG"
+          extra="dva与request"
+          title="数据-请求远程数据"
+          thumb="http://img10.360buyimg.com/jdphoto/s72x72_jfs/t5872/209/5240187906/2872/8fa98cd/595c3b2aN4155b931.png"
         >
           <AtButton
             size="small"
             circle={true}
             type="secondary"
             onClick={this.props.getAsyncData}
+            className="data--btn"
           >
             异步请求
           </AtButton>
@@ -66,25 +68,27 @@ class Data extends Component {
             type="primary"
             disabled={!(asyncData.length > 0)}
             onClick={this.props.initAsyncData}
+            className="data--btn"
           >
             清空数据
           </AtButton>
-
-          {/* 数据列表 */}
-          {!!asyncData && isArray(asyncData) && asyncData.length > 0 ? (
-            <AtList>
-              {asyncData.map(item => (
-                <AtListItem
-                  key={item.id}
-                  title={item.name}
-                  note={item.email}
-                  arrow="right"
-                />
-              ))}
-            </AtList>
-          ) : (
-            <Text>无数据</Text>
-          )}
+          <View>
+            {/* 数据列表 */}
+            {!!asyncData && isArray(asyncData) && asyncData.length > 0 ? (
+              <AtList>
+                {asyncData.map(item => (
+                  <AtListItem
+                    key={item.id}
+                    title={item.name}
+                    note={item.email}
+                    arrow="right"
+                  />
+                ))}
+              </AtList>
+            ) : (
+              <Text>无数据</Text>
+            )}
+          </View>
         </AtCard>
       </View>
     )

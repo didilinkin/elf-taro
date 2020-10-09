@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 // import { connect } from 'react-redux'
-import { View, Text } from '@tarojs/components'
-import { AtButton } from 'taro-ui'
+import { View, Text, Image } from '@tarojs/components'
+import { AtButton, AtDivider } from 'taro-ui'
 import { styled } from 'linaria/react'
 
-import './index.styl'
+import './style.styl'
 
 // #region 书写注意
 //
@@ -64,19 +64,52 @@ class Index extends Component {
   render() {
     return (
       <View className="index">
-        <View>
-          <Text>Hello, weapp!</Text>
-        </View>
+        <View className="at-article">
+          <View className="at-article__h1">elf-taro-cli</View>
+          <View className="at-article__info">基于 Taro的小程序脚手架</View>
+          <View className="at-article__content">
+            <View className="at-article__section">
+              <View className="at-article__h2">“首页” 功能介绍</View>
+              <View className="at-article__h3">
+                Taro-UI 与 CSS in JS样式方案
+              </View>
+              <Image
+                className="at-article__img"
+                src="http://storage.360buyimg.com/mtd/home/32443566_635798770100444_2113947400891531264_n1533825816008.jpg"
+                mode="widthFix"
+              />
+              <View className="at-article__p">
+                使用 CSS in JS 修改 文字颜色
+              </View>
+              <BtnGroup color="red">
+                <Text>文字颜色</Text>
+                <View>
+                  <AtButton type="primary" size="small" className="index--btn">
+                    按钮A
+                  </AtButton>
+                  <AtButton
+                    type="secondary"
+                    size="small"
+                    className="index--btn"
+                  >
+                    按钮B
+                  </AtButton>
+                </View>
+              </BtnGroup>
 
-        <BtnGroup color="red">
-          测试文字颜色
-          <AtButton type="primary" size="small">
-            按钮A
-          </AtButton>
-          <AtButton type="secondary" size="small">
-            按钮B
-          </AtButton>
-        </BtnGroup>
+              <AtDivider content="“计数” 功能介绍" />
+              <View className="at-article__p">基于Dva的计数器</View>
+
+              <AtDivider content="“数据” 功能介绍" />
+              <View className="at-article__p">
+                基于Dva与request的异步请求demo
+              </View>
+
+              <AtDivider content="“地图” 功能介绍" />
+              <View className="at-article__p">基于腾讯地图的地图功能</View>
+            </View>
+          </View>
+        </View>
       </View>
     )
   }
