@@ -30,6 +30,18 @@ yarn dev:weapp
 yarn build:weapp
 ```
 
+## 注意事项
+
+- 本项目拉取到本地后， “小程序开发工具” 请打开 “不校验合法域名”！ 方便查看 请求效果
+
+## 常见错误
+
+1. 开发环境版本不相同
+
+   [Taro 版本升级权威指南](https://aotu.io/notes/2020/08/31/taro-versions/index.html)
+
+   [taro update self 的更新好像不管用](https://github.com/NervJS/taro/issues/297)
+
 # 目录结构
 
     ├── dist/                       // 微信小程序编译结果目录
