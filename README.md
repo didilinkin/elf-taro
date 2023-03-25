@@ -1,8 +1,16 @@
-# elf-taro-cli
+# elf-taro
 
 Elf 基于 Taro 的 小程序 脚手架
 
+> 请保证开发环境 版本! 否则会报错! 不要升级依赖!
+>
+> 请使用: yarn 安装依赖!
+>
 > Taro-cli version: Taro v3.0.0-rc.6
+>
+> Taro v3.2.4
+>
+> Node version: v14.14.0
 
 ## 主要功能
 
