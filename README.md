@@ -2,15 +2,38 @@
 
 Elf 基于 Taro 的 小程序 脚手架
 
-> 请保证开发环境 版本! 否则会报错! 不要升级依赖!
->
-> 请使用: yarn 安装依赖!
->
-> Taro-cli version: Taro v3.0.0-rc.6
->
-> Taro v3.2.4
->
-> Node version: v14.14.0
+## 必要依赖
+> 不要轻易升级 `package.json`内的依赖
+
+* ### Node
+  version: v14.14.0, 通过 `nvm`更改 Node 版本:
+  ```bash
+  nvm install 14.14.0   # 安装 v14.14.0
+  nvm use 14.14.0       # 切换为 v14.14.0
+
+  node -v               # 查看 切换是否成功
+  # => v14.14.0
+  ```
+
+
+* ### Yarn
+  version: v1.22.19
+
+  请务必使用 `Yarn` 安装依赖! 不要使用 其他安装工具, 有几率报错
+  
+  本项目使用的 源: `https://registry.yarnpkg.com/`
+  
+  未使用 taobao源, 推荐 `nrm`工具切换源
+
+
+* ### taro-cli
+  version: v3.0.0-rc.6, 需要将工具切换版本
+  ```bash
+  yarn global add @tarojs/cli@3.0.0-rc.6
+
+  taro -v               # 查看 切换是否成功
+  # => 3.0.0-rc.6
+  ```
 
 ## 主要功能
 
@@ -80,19 +103,6 @@ yarn build:weapp
 - 用户信息读取
 - components 功能
 - dva-model-extend
-
-## 项目版本升级
-
-```bash
-# 1. 更新 Taro CLI 工具:
-npm i -g @tarojs/cli@latest
-
-# 2. 更新项目中 Taro 相关的依赖:
-taro update project
-
-# 3. 删除原来的node_modules后重新安装依赖(注意):
-cnpm install
-```
 
 ## 已配置的依赖
 
